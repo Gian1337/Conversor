@@ -97,5 +97,6 @@ input{
 
   .ayuda{
     margin-left: 550px;
+    transform: translate(0px, 35px);
     
   }
