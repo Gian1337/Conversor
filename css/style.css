@@ -23,7 +23,7 @@ select{
     width: 30%;
 }
 
-input{
+#cantidad{
     text-align: center;
     margin-top: 4%;
 }

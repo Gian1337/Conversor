@@ -194,9 +194,7 @@ function convertir() {
 
 // Popover Bienvenida
 $(document).ready(function() {
-
     $(".toast").toast("show");
-    
 });
 
 //Popovers Ayuda
@@ -205,3 +203,37 @@ let popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggl
 let popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
   return new bootstrap.Popover(popoverTriggerEl)
 })
+
+
+//AJAX POST
+
+function enviarForm() {
+    let mail = $("#btnForm").value;
+
+    $.ajax({
+        type:"post",
+        url: "https://jsonplaceholder.typicode.com/posts",
+        data: mail,
+        success:function () {
+            $("#mensaje").html("Gracias por suscribirte!");
+            $("#mensaje").fadeIn(2000).fadeOut(2000);
+            
+        }
+    });
+}
+
+/*
+$("#btnForm").click(enviarForm);
+
+function enviarCompra() {
+    let mail = $("#formulario").value;
+    $.post("https://jsonplaceholder.typicode.com/posts", JSON.stringify("formulario"), function (respuesta, estado) {
+      console.log(respuesta);
+      console.log(estado);
+      if (estado == "success"){
+        $("#mensajeBienvenida").html("Gracias por suscribirte!");
+        $("#mensajeBienvenida").fadeIn(2000).fadeOut(2000);
+      }
+    } );
+  }
+  */
