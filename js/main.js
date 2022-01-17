@@ -193,6 +193,7 @@ function convertir() {
 }
 
 // Popover Bienvenida
+
 $(document).ready(function() {
     $(".toast").toast("show");
 });
@@ -221,19 +222,3 @@ function enviarForm() {
         }
     });
 }
-
-/*
-$("#btnForm").click(enviarForm);
-
-function enviarCompra() {
-    let mail = $("#formulario").value;
-    $.post("https://jsonplaceholder.typicode.com/posts", JSON.stringify("formulario"), function (respuesta, estado) {
-      console.log(respuesta);
-      console.log(estado);
-      if (estado == "success"){
-        $("#mensajeBienvenida").html("Gracias por suscribirte!");
-        $("#mensajeBienvenida").fadeIn(2000).fadeOut(2000);
-      }
-    } );
-  }
-  */

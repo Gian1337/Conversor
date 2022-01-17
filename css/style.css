@@ -5,8 +5,12 @@
 body{
     height: 100%;
     width: 100%;
-    background-size: cover;
+    /*
+    background-size: 100% 100%;
     background-repeat: no-repeat;
+    */
+    background-color: #070707;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23909090' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 main{
     height: 100%;
@@ -19,8 +23,13 @@ p{
     width: 8%;
 }
 
-select{
+select,input{
     width: 30%;
+    border: 2px solid;
+    border-radius: 25px;
+    background: rgb(0, 30, 36);
+    color: white;
+    text-align: center;
 }
 
 #cantidad{
